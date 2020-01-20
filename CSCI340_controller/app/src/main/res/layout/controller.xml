@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="horizontal"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <TextView
+
+            android:layout_width="280dp"
+            android:layout_height="496dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/scroll"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:id="@+id/pad"
+            android:clickable="true"
+            android:background="@drawable/shadow"
+            tools:ignore="MissingConstraints"
+
+
+    />
+    <ProgressBar
+            android:elevation="100dp"
+            android:layout_width="0dp"
+            android:background="#fafafa"
+            android:padding="100dp"
+            android:layout_height="0dp"
+            android:id="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="1.0"/>
+    <TextView
+            android:text="LC"
+            android:gravity="center"
+            android:layout_width="97dp"
+            android:layout_height="261dp"
+            android:layout_gravity="right"
+            android:textColor="#A9A9A9"
+            android:clickable="true"
+            android:elevation="9dp"
+            android:background="@drawable/shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/lcBtn"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintBottom_toTopOf="@+id/rcBtn"
+            app:layout_constraintStart_toEndOf="@+id/pad"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:focusable="true" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+            android:text="RC"
+            android:gravity="center"
+            android:layout_width="97dp"
+            android:elevation="8dp"
+            android:layout_height="234dp"
+            android:layout_gravity="right"
+            android:textColor="#A9A9A9"
+            android:clickable="true"
+            android:background="@drawable/shadow"
+            android:id="@+id/rcBtn"
+            tools:ignore="MissingConstraints"
+            android:focusable="true" app:layout_constraintStart_toEndOf="@+id/pad"
+             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintBottom_toTopOf="@+id/keyboard"/>
+
+
+    <TextView
+            android:layout_width="32dp"
+            android:layout_height="499dp"
+            android:id="@+id/scroll"
+            android:clickable="true"
+            android:layout_gravity="left"
+            android:elevation="5dp"
+            android:background="@drawable/shadow"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints" android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/keyboard" app:layout_constraintVertical_bias="1.0"/>
+
+    <EditText
+            android:layout_height="219dp" android:layout_width="407dp"
+            android:id="@+id/keyboard"
+            android:textSize="20dp"
+            android:hint="Keyboard"
+
+            android:gravity="top"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/pad"
+            app:layout_constraintEnd_toEndOf="@+id/rcBtn"
+            android:textAlignment="center"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            tools:ignore="MissingConstraints,NotSibling"
+            app:layout_constraintStart_toStartOf="@+id/scroll"
+            app:layout_constraintHorizontal_bias="0.261"
+
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
